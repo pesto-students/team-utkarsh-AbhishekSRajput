@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Birthday Message Creator</title>
+		<style>
+			body {
+				padding: 40px 130px;
+			}
+			#formId {
+				width: 650px;
+			}
+
+			#formId div {
+				padding: 5px 0;
+			}
+
+			label {
+				width: 140px;
+				float: left;
+			}
+
+			input {
+				padding: 3px;
+				font-size: 14px;
+				/* width: 300px; */
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Happy Birthday Message Creator</h1>
+		<form
+			id="formId"
+			name="formId"
+			method="post"
+			enctype="multipart/form-data"
+		>
+			<div>
+				<label for="message">Message? </label>
+				<input required type="text" name="message" id="message" />
+			</div>
+			<div>
+				<label for="email">Email address?: </label>
+				<input
+					required
+					placeholder="name@domain.com"
+					pattern="[a-zA-z0-9-_\.]+@[a-zA-z0-9]+(?:\.[a-zA-Z0-9-]+)*"
+					type="text"
+					name="email"
+					id="email"
+				/>
+			</div>
+			<div>
+				<label for="date">Date to send?: </label>
+				<input type="date" name="date" id="date" />
+			</div>
+			<div>
+				<label for="color">Message color? </label>
+				<input type="color" name="color" id="color" />
+			</div>
+			<div>
+				<label for="number">Number of blinks? </label>
+				<input
+					type="number"
+					name="number"
+					id="number"
+					value="0"
+					min="0"
+					max="10"
+				/>
+			</div>
+			<div>
+				<label for="range">Music volume? </label>
+				<input
+					type="range"
+					id="range"
+					name="range"
+					min="0"
+					max="50"
+					value="20"
+					step="5"
+				/>
+			</div>
+			<div>
+				<button type="submit">Send Birthday Message</button>
+			</div>
+		</form>
+	</body>
+</html>
