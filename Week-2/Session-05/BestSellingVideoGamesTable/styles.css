@@ -1,0 +1,32 @@
+:root {
+	--green: green;
+	--light--green: #66ff99;
+}
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 6vw;
+}
+
+.game-table {
+	border: 2px solid var(--green);
+	text-align: center;
+	height: 200px;
+	width: 400px;
+}
+
+table caption {
+	text-transform: uppercase;
+	background-color: var(--green);
+	color: white;
+	padding: 10px;
+}
+
+table tr:nth-child(even) {
+	background-color: var(--light--green);
+}
