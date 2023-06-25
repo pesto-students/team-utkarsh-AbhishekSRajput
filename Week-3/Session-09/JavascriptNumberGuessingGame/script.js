@@ -12,7 +12,9 @@ function playGuessingGame(numberToGuess, totalGuesses = 10) {
 
 	while (userGuessCount <= totalGuesses) {
 		if (userGuessCount === 0 && !isNaN(userGuessedNumber)) {
-			const isCancelled = window.prompt("Enter number between 1 and 100");
+			const isCancelled = window.prompt(
+				"Enter number between 1 and 100."
+			);
 
 			userGuessedNumber =
 				isCancelled === null ? null : parseInt(isCancelled);
@@ -23,7 +25,7 @@ function playGuessingGame(numberToGuess, totalGuesses = 10) {
 			userGuessCount = isValidInput(userGuessedNumber, userGuessCount);
 
 			if (userGuessCount === 0) {
-				const isCancelled = window.prompt("Please enter a number");
+				const isCancelled = window.prompt("Please enter a number.");
 
 				userGuessedNumber =
 					isCancelled === null ? null : parseInt(isCancelled);
@@ -39,7 +41,7 @@ function playGuessingGame(numberToGuess, totalGuesses = 10) {
 		}
 
 		if (isNaN(userGuessedNumber)) {
-			const isCancelled = window.prompt("Please enter a number");
+			const isCancelled = window.prompt("Please enter a number.");
 
 			userGuessedNumber =
 				isCancelled === null ? null : parseInt(isCancelled);
@@ -52,7 +54,7 @@ function playGuessingGame(numberToGuess, totalGuesses = 10) {
 
 		if (userGuessedNumber < numberToGuess) {
 			const isCancelled = window.prompt(
-				`${userGuessedNumber} is too small`
+				`${userGuessedNumber} is too small.`
 			);
 			userGuessedNumber =
 				isCancelled === null ? null : parseInt(isCancelled);
@@ -65,7 +67,7 @@ function playGuessingGame(numberToGuess, totalGuesses = 10) {
 
 		if (userGuessedNumber > numberToGuess) {
 			const isCancelled = window.prompt(
-				`${userGuessedNumber} is too large`
+				`${userGuessedNumber} is too large.`
 			);
 
 			userGuessedNumber =
@@ -78,12 +80,17 @@ function playGuessingGame(numberToGuess, totalGuesses = 10) {
 		}
 
 		if (userGuessedNumber === numberToGuess) {
-			window.alert("you guessed the right answer");
+			window.alert(
+				`Congratulations ${userGuessedNumber} is right answer you guessed it in ${userGuessCount} tries.`
+			);
 			break;
 		}
 	}
-
-	return userGuessCount <= totalGuesses ? userGuessCount : 0;
+	const result = userGuessCount <= totalGuesses ? userGuessCount : 0;
+	if (result === 0) {
+		window.alert("Sorry you could not guess the right number.");
+	}
+	return result;
 }
 
 console.log("return value", playGuessingGame(50, 15));
