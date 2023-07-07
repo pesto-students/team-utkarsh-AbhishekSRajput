@@ -1,0 +1,77 @@
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	box-sizing: inherit;
+	font-family: "Roboto", Helvetica, sans-serif;
+}
+
+.container {
+	width: 80vw;
+	margin: 60px auto;
+	font-size: 13px;
+	border-radius: 3px;
+}
+
+.container h1 {
+	text-align: center;
+	font-size: 16px;
+	color: #444444;
+	margin-bottom: 12px;
+}
+
+.offer {
+	display: inline-block;
+	width: 400px;
+	margin: 4px;
+	text-align: center;
+	border: 1px solid #cccccc;
+}
+
+.offerTitle {
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	background: #00b3b3;
+	padding: 12px;
+}
+
+.offerContents {
+	padding: 20px;
+	background: #fafafa;
+}
+
+table {
+	width: 100%;
+	background: #fff;
+	border-spacing: 0;
+}
+
+table th {
+	font-size: 12px;
+	font-weight: bold;
+	color: #777777;
+	margin: 0;
+}
+
+table td {
+	font-weight: lighter;
+	font-weight: #444444;
+}
+
+table th,
+table td {
+	padding: 12px 0;
+	border-bottom: 1px solid #f1f1f1;
+	text-align: left;
+}
+
+.finalValue {
+	font-weight: bold;
+	color: #2222ff;
+}

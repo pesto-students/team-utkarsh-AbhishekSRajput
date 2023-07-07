@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Birthday Message</title>
+		<style>
+      body {
+        padding: 40px 130px;
+      }
+			#formId {
+				width: 650px;
+			}
+
+      #formId div{
+        padding: 5px 0;
+      }
+
+			label {
+				width: 140px;
+				float: left;
+			}
+
+			input {
+				padding: 3px;
+				font-size: 14px;
+				width: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Join a social network</h1>
+		<form id="formId" name="formId" method="post" enctype="multipart/form-data" >
+				<div>
+					<label for="fullName">Full Name: </label>
+					<input required type="text" name="fullName" id="fullName" />
+				</di>
+				<div>
+					<label for="email">Email address: </label>
+					<input required type="text" name="email" id="email" />
+				</div>
+				<div>
+					<label for="about">About you: </label>
+					<textarea rows="3" cols="50" name="about" id="about" >This is short demo on about</textarea>
+				</div>
+        <div>
+					<label for="picture">Photo: </label>
+					<input type="file" name="picture" id="picture" />
+				</div>
+				<div>
+					<input style="width: 70px;" type="submit" />
+				</di>
+		</form>
+	</body>
+</html>
