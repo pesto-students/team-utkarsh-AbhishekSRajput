@@ -1,0 +1,32 @@
+body {
+	font-family: Calibri, Myriad;
+}
+
+/* Your solution goes here */
+div {
+	margin-bottom: 5px;
+}
+
+label {
+	display: inline-block;
+	width: 120px;
+}
+
+input,
+textarea {
+	width: 300px;
+	padding: 10px;
+}
+
+input[submit] {
+	width: auto;
+}
+
+.required::after {
+	content: "*";
+	color: red;
+}
+
+input ~ label {
+	background-color: rgb(219, 241, 248);
+}
