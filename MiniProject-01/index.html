@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Mini Project.</title>
+	</head>
+	<body id="body">
+		<div id="blob"></div>
+		<div id="blur">
+			<nav class="navbar">
+				<menu class="menu">
+					<div id="menuSvgContainer" onclick="">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-6 h-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+							/>
+						</svg>
+					</div>
+					<div id="dropdownMenu">
+						<div class="sidebarContainer">
+							<h4>Search History</h4>
+							<ol id="searchListContainerMenu"></ol>
+						</div>
+					</div>
+				</menu>
+			</nav>
+			<section class="layout">
+				<aside class="sidebar">
+					<div class="sidebarContainer">
+						<h4>Search History</h4>
+						<ol id="searchListContainer"></ol>
+					</div>
+				</aside>
+				<main class="content">
+					<div class="contentContainer">
+						<h1 class="contentHeader">Recipe finder</h1>
+						<form id="contentForm">
+							<input
+								id="inputField"
+								name="input"
+								type="text"
+								placeholder="Enter your Prompts here."
+								required
+							/>
+							<button type="submit">Generate</button>
+						</form>
+						<div id="cards"></div>
+					</div>
+				</main>
+			</section>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
